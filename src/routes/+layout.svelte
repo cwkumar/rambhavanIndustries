@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>SwiftMarket</title>
+	<title>Rambhavan Industries</title>
 
 	<meta
 		name="description"

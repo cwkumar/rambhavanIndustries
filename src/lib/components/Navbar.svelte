@@ -9,13 +9,13 @@
 	<div class="max-w-7xl mx-auto">
 		<div class="flex justify-between items-center py-4">
 			<div>
-				<a class="mx-5 font-extrabold text-xl" href="/">SwiftMarket</a>
+				<a class="mx-5 font-extrabold text-xl" href="/">RamBhavan</a>
 			</div>
-			<div class="flex items-center gap-6 m-auto">
+			<!-- <div class="flex items-center gap-6 m-auto">
 				<a class="hover:underline underline-offset-4" href="/shop/all">Shop</a>
 				<a class="hover:underline underline-offset-4" href="#!">Blog</a>
-			</div>
-			<div class="flex mx-5 gap-6">
+			</div> -->
+			<!-- <div class="flex mx-5 gap-6">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -55,7 +55,7 @@
 						</span>
 					{/if}
 				</button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </nav>

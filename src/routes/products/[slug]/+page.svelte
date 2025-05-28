@@ -38,7 +38,7 @@
 </script>
 
 <svelte:head>
-	<title>{product.name} | SwiftMarket</title>
+	<title>{product.name} | Rambhavan Industries</title>
 </svelte:head>
 
 <div class="flex flex-col mx-3 py-10 gap-5 lg:mx-10 lg:flex-row lg:gap-8">

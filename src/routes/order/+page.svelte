@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>SwiftMarket Order</title>
+	<title>Rambhavan Industries Order</title>
 </svelte:head>
 
 {#if orderSuccess}

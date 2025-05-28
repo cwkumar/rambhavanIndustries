@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>SwiftMarket Shop</title>
+	<title>Rambhavan Industries Shop</title>
 </svelte:head>
 
 <div class="flex justify-center items-center gap-6 m-auto p-5 flex-wrap">

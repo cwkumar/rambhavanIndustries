@@ -1,26 +1,7 @@
-import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
+import { products, carouselItems, showcase } from '$lib/data';
 
-export const load = (async ({ locals }) => {
-	try {
-		const [showcaseRecords, carouselsRecords] = await Promise.all([
-			locals.pb.collection('showcase').getFullList({
-				expand: 'products',
-				sort: 'created'
-			}),
-			locals.pb.collection('carousels').getFullList({
-				sort: 'created'
-			})
-		]);
-
-		return {
-			showcase: structuredClone(showcaseRecords),
-			carousels: structuredClone(carouselsRecords)
-		};
-	} catch (e) {
-		console.log(`Couldnt load page /`);
-		throw error(500, {
-			message: 'Couldnt load this page'
-		});
-	}
+export const load = (async () => {
+  // Ensure both products and carousel items are sent
+  return { products, carouselItems, showcase };
 }) satisfies PageServerLoad;
