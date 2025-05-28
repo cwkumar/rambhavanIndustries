@@ -7,10 +7,11 @@ const config = {
 
   kit: {
     adapter: adapter({
-      // pick a valid runtime: nodejs16.x or nodejs20.x
-      runtime: 'nodejs20.x',
-      // you can also set memory, maxDuration, etc.
-    })
+      // use Edge Functions for SSR
+      runtime: 'edge'
+    }),
+
+    // ...any other SvelteKit config
   }
 };
 
