@@ -1,6 +1,6 @@
 # SwiftMarket
 
-E-Commerce solution built with SvelteKit, Pocketbase as a database and Stripe for payments, providing better performance and faster development time.
+E-Commerce solution built with SvelteKit and Stripe for payments, providing better performance and faster development time.
 
 You can try a demo at https://swiftmarket.vercel.app/
 
@@ -26,25 +26,11 @@ Create .env file
 cp .env.example .env
 ```
 
-Change the variables, if you haven't modified the Pocketbase database, the URL should be the same. `PUBLIC_STRIPE_KEY` and `SECRET_STRIPE_KEY` can be found from your Stripe dashboard.
-
-### Setting up Pocketbase
-
-Download the [Pocketbase](https://pocketbase.io/docs/) file and serve it with
-
-```bash
-./pocketbase serve
-```
-
-Open the Admin UI and create an admin account.
-
-Download _[pb_schema.json](https://github.com/SwiftMarket/pocketbase_collections/blob/main/pb_schema.json)_
-
-Go to **Settings/Import collections** and click **Load from JSON file** and select _pb_schema.json_
+Set the `PUBLIC_STRIPE_KEY` and `SECRET_STRIPE_KEY` variables with the values from your Stripe dashboard.
 
 ### Developing
 
-After you serve Pocketbase, you can safely launch the SvelteKit project with:
+Start the SvelteKit project with:
 
 ```bash
 pnpm run dev

@@ -1,13 +1,12 @@
-import PocketBase from 'pocketbase';
 
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 declare global {
 	namespace App {
 		// interface Error {}
-		interface Locals {
-			pb: PocketBase;
-		}
+               interface Locals {
+                       // add custom locals if needed in the future
+               }
 		// interface PageData {}
 		// interface Platform {}
 	}

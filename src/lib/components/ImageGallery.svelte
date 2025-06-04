@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { PUBLIC_POCKETBASE_URL } from '$env/static/public';
 
-	export let productId: string;
-	export let images: any;
+       export let images: any;
 	export let alt_text: string;
 
 	let original_image = images[0];
@@ -29,7 +27,7 @@
 <div class="flex flex-col gap-5">
 	<img
 		class="w-full"
-		src="{PUBLIC_POCKETBASE_URL}/api/files/products/{productId}/{active_image}"
+               src="{active_image}"
 		width="700"
 		height="700"
 		alt={alt_text}
@@ -40,7 +38,7 @@
 			<button on:click={() => setImage(image)}>
 				<img
 					class={generateStyle(image)}
-					src="{PUBLIC_POCKETBASE_URL}/api/files/products/{productId}/{image}"
+                                       src="{image}"
 					width="700"
 					height="700"
 					alt={alt_text}
