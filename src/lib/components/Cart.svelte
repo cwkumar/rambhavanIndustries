@@ -3,7 +3,6 @@
 	import { onDestroy } from 'svelte';
 	import { cartItemsStore, removeFromCart, type CartItem } from '$lib/stores';
 	import QuantityInput from '$lib/components/QuantityInput.svelte';
-	import { PUBLIC_POCKETBASE_URL } from '$env/static/public';
 	import { onMount } from 'svelte';
 	import { loadStripe } from '@stripe/stripe-js/pure';
 	import { PUBLIC_STRIPE_KEY } from '$env/static/public';
@@ -88,8 +87,8 @@
 		<div class="flex-col overflow-y-auto">
 			{#each $cartItemsStore as cartItem}
 				<div class="flex mx-5 mb-5 gap-5">
-					<img
-						src="{PUBLIC_POCKETBASE_URL}/api/files/products/{cartItem.id}/{cartItem.thumbnail}"
+                                        <img
+                                                src="{cartItem.thumbnail}"
 						width="92"
 						height="92"
 						alt="{cartItem.name} thumbnail"

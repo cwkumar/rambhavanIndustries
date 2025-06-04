@@ -12,7 +12,6 @@ specifiers:
   eslint: ^8.35.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-svelte3: ^4.0.0
-  pocketbase: ^0.12.1
   postcss: ^8.4.21
   prettier: ^2.8.4
   prettier-plugin-svelte: ^2.9.0
@@ -30,7 +29,6 @@ specifiers:
 
 dependencies:
   '@stripe/stripe-js': 1.48.0
-  pocketbase: 0.12.1
   svelte-markdown: 0.2.3_svelte@3.55.1
   tw-elements: 1.0.0-beta1_postcss@8.4.21
 
@@ -1750,9 +1748,6 @@ packages:
     hasBin: true
     dev: true
 
-  /pocketbase/0.12.1:
-    resolution: {integrity: sha512-kihThVla/JontCGA2zVGuxk1vWtz/yt7FqnL241oxd+w7RBVNzLIRKN6GolnY9DGOekNmFRb57CL24sbUm4wJA==}
-    dev: false
 
   /popper.js/1.16.1:
     resolution: {integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==}

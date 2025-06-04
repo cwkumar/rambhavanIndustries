@@ -5,7 +5,6 @@
 	import QuantityInput from '$lib/components/QuantityInput.svelte';
 	import ProductDetails from '$lib/components/ProductDetails.svelte';
 	import ProductItem from '$lib/components/ProductItem.svelte';
-	import { PUBLIC_POCKETBASE_URL } from '$env/static/public';
 
 	export let data: any;
 	let original_data = data;
@@ -27,7 +26,7 @@
 			id: product.id,
 			name: product.name,
 			slug: product.slug,
-			thumbnail: `${product.images[0]}?thumb=100x100`,
+                       thumbnail: product.images[0],
 			price: product.price,
 			salePrice: product.sale_price,
 			quantity: quantity
@@ -89,11 +88,8 @@
 				{#each product.expand.related_products as relatedProduct (relatedProduct.id)}
 					<ProductItem
 						title={relatedProduct.name}
-						image="{PUBLIC_POCKETBASE_URL}/api/files/{relatedProduct.collectionName}/{relatedProduct.id}/{relatedProduct
-							.images[0]}"
-						hoverImage={relatedProduct.images.length > 1
-							? `${PUBLIC_POCKETBASE_URL}/api/files/${relatedProduct.collectionName}/${relatedProduct.id}/${relatedProduct.images[1]}`
-							: ''}
+                                                image={relatedProduct.imageUrl}
+                                                hoverImage={relatedProduct.hoverImage ?? ''}
 						price={relatedProduct.price}
 						salePrice={relatedProduct.sale_price}
 						link="/products/{relatedProduct.slug}"

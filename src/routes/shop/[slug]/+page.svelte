@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ProductItem from '$lib/components/ProductItem.svelte';
-	import { PUBLIC_POCKETBASE_URL } from '$env/static/public';
 	import AccordionItem from '$lib/components/AccordionItem.svelte';
 
 	export let data: any;
@@ -51,17 +50,14 @@
 
 		<div class="grid grid-cols-2 gap-5 md:grid-cols-3">
 			{#each products as product}
-				<ProductItem
-					title={product.name}
-					image="{PUBLIC_POCKETBASE_URL}/api/files/{product.collectionName}/{product.id}/{product
-						.images[0]}"
-					hoverImage={product.images.length > 1
-						? `${PUBLIC_POCKETBASE_URL}/api/files/${product.collectionName}/${product.id}/${product.images[1]}`
-						: ''}
-					price={product.price}
-					salePrice={product.sale_price}
-					link="/products/{product.slug}"
-				/>
+                                <ProductItem
+                                        title={product.name}
+                                        image={product.imageUrl}
+                                        hoverImage={product.hoverImage ?? ''}
+                                        price={product.price}
+                                        salePrice={product.sale_price}
+                                        link="/products/{product.slug}"
+                                />
 			{/each}
 		</div>
 	</div>
