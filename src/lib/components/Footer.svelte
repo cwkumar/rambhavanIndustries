@@ -101,7 +101,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="text-center p-6 bg-gray-200">
-		© 2023, RamBhavan Industries
-	</div>
+    <div class="text-center p-6 bg-gray-200">
+            © 2025, RamBhavan Industries
+    </div>
 </footer>
